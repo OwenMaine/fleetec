@@ -587,6 +587,12 @@ a:focus {
   top: 15%;
 }
 
+/* ensure the body and html have no overflow */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 /* end contact_section */
 
 /* info section */
