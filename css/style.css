@@ -536,6 +536,11 @@ a:focus {
 
 /* contact_section */
 
+.contact_section {
+  display: flex;
+  justify-content: center;
+}
+
 .contact_section .col-md-6 {
   padding: 0;
 }
