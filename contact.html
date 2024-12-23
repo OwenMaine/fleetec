@@ -340,47 +340,48 @@
 
 
   <script>
-    // This example adds a marker to indicate the position of Bondi Beach in Sydney,
-    // Australia.
     function initMap() {
-      var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 11,
-        center: {
-          lat: 40.645037,
-          lng: -73.880224
-        },
+      // Coordinates for Fleet Tec LLC: 6002 31st St E, Bradenton, FL 34203
+      const fleetTecLocation = {
+        lat: 27.444903,
+        lng: -82.537847
+      };
+  
+      // Create map centered on Fleet Tec LLC
+      const map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 15,  // Closer zoom level for better visibility
+        center: fleetTecLocation,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        scrollwheel: true
       });
-
-      var image = 'images/maps-and-flags.png';
-      var beachMarker = new google.maps.Marker({
-        position: {
-          lat: 40.645037,
-          lng: -73.880224
-        },
+  
+      // Custom marker for business location
+      const marker = new google.maps.Marker({
+        position: fleetTecLocation,
         map: map,
-        icon: image
+        title: 'Fleet Tec LLC',
+        animation: google.maps.Animation.DROP, // Adds a drop animation to the marker
+      });
+  
+      // Add info window with business details
+      const infoWindow = new google.maps.InfoWindow({
+        content: `
+          <div style="padding: 10px;">
+            <h3 style="margin: 0 0 5px 0;">Fleet Tec LLC</h3>
+            <p style="margin: 0;">6002 31st St E<br>Bradenton, FL 34203</p>
+          </div>
+        `
+      });
+  
+      // Open info window when marker is clicked
+      marker.addListener('click', () => {
+        infoWindow.open(map, marker);
       });
     }
-    
-  function initMap() {
-    // Coordinates for 6002 31st St E, Bradenton, FL 34203
-    const location = { lat: 27.444903, lng: -82.537847 };
-
-    // Initialize the map
-    const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 15, // Adjust zoom level
-      center: location,
-    });
-
-    // Add a marker at the location
-    const marker = new google.maps.Marker({
-      position: location,
-      map: map,
-      title: "Fleet Tec LLC",
-    });
-  }
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap" async defer></script>
+  </script>
+  
+  <!-- Google Maps API Script -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap" async defer></script>
 
   <!-- end google map js -->
 
