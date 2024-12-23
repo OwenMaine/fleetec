@@ -554,6 +554,7 @@ a:focus {
 
 .contact_form-container form {
   width: 100%;
+  justify-content: center;
 }
 
 .contact_form-container form input {
@@ -563,6 +564,7 @@ a:focus {
   outline: none;
   background-color: #fcfcfc;
   margin: 10px 0;
+  justify-content: center;
 }
 
 .message_input {
