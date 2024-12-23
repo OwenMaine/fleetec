@@ -549,6 +549,7 @@ a:focus {
   padding: 60px;
   background-color: #78cffd;
   position: relative;
+  justify-content: center;
 }
 
 .contact_form-container form {
