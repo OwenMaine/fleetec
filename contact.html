@@ -330,7 +330,7 @@
   <section class="container-fluid footer_section">
     <p>
       Copyright &copy; 2024 All Rights Reserved 
-      <a href="#"></a>
+     
     </p>
   </section>
   <!-- footer section -->
@@ -339,7 +339,7 @@
   <script type="text/javascript" src="js/bootstrap.js"></script>
 
 
-  <!--<script>
+  <script>
     // This example adds a marker to indicate the position of Bondi Beach in Sydney,
     // Australia.
     function initMap() {
@@ -361,10 +361,27 @@
         icon: image
       });
     }
-  </script>-->
-  <!-- google map js -->
-  <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap">
-  </script>-->
+    
+  function initMap() {
+    // Coordinates for 6002 31st St E, Bradenton, FL 34203
+    const location = { lat: 27.444903, lng: -82.537847 };
+
+    // Initialize the map
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 15, // Adjust zoom level
+      center: location,
+    });
+
+    // Add a marker at the location
+    const marker = new google.maps.Marker({
+      position: location,
+      map: map,
+      title: "Fleet Tec LLC",
+    });
+  }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap" async defer></script>
+
   <!-- end google map js -->
 
 </body>
