@@ -536,11 +536,6 @@ a:focus {
 
 /* contact_section */
 
-.contact_section {
-  display: flex;
-  justify-content: center;
-}
-
 .contact_section .col-md-6 {
   padding: 0;
 }
@@ -549,12 +544,10 @@ a:focus {
   padding: 60px;
   background-color: #78cffd;
   position: relative;
-  justify-content: center;
 }
 
 .contact_form-container form {
   width: 100%;
-  justify-content: center;
 }
 
 .contact_form-container form input {
@@ -562,9 +555,9 @@ a:focus {
   padding: 10px;
   border: none;
   outline: none;
+
   background-color: #fcfcfc;
   margin: 10px 0;
-  justify-content: center;
 }
 
 .message_input {
@@ -577,8 +570,10 @@ a:focus {
   padding: 8px 40px;
   background-color: #0a0057;
   color: #fff;
+
   margin-top: 20px;
 }
+
 
 .contact_form-container::before {
   content: "";
@@ -586,14 +581,11 @@ a:focus {
   height: 50px;
   background-color: #78cffd;
   position: absolute;
+  /* right: 0; */
+  /* bottom: 25%; */
   left: -50px;
   top: 15%;
-}
 
-/* ensure the body and html have no overflow */
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
 }
 
 /* end contact_section */
