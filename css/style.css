@@ -176,6 +176,11 @@ a:focus {
   background-image: url(../images/menu.png);
   background-size: 48px;
 }
+@media (min-width: 992px) {
+  .custom_nav-container.navbar-expand-lg .navbar-nav {
+      padding-top: 10px; /* Adjusts nav items lower */
+  }
+}
 
 /*end header section*/
 
