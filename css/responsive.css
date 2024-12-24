@@ -24,7 +24,7 @@
     }
 
     .header_section {
-        background-image: url(../images/header-bg.jpg);
+       /* background-image: url(../images/header-bg.jpg);*/
         background-repeat: no-repeat;
         background-size: 140% 90px;
 
